@@ -3,29 +3,57 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180D060E242DAEAF007302CD /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D060D242DAEAF007302CD /* AuthViewController.swift */; };
 		181E127624203EFF00325FD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E127524203EFF00325FD4 /* AppDelegate.swift */; };
 		181E127824203EFF00325FD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E127724203EFF00325FD4 /* SceneDelegate.swift */; };
-		181E127A24203EFF00325FD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E127924203EFF00325FD4 /* ViewController.swift */; };
 		181E127D24203EFF00325FD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181E127B24203EFF00325FD4 /* Main.storyboard */; };
 		181E128024203EFF00325FD4 /* TripWithFriend.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 181E127E24203EFF00325FD4 /* TripWithFriend.xcdatamodeld */; };
 		181E128224203F0000325FD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181E128124203F0000325FD4 /* Assets.xcassets */; };
 		181E128524203F0000325FD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181E128324203F0000325FD4 /* LaunchScreen.storyboard */; };
+		181E129324203FAD00325FD4 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E128C24203FAD00325FD4 /* AddTripViewController.swift */; };
+		181E129624203FAD00325FD4 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E128F24203FAD00325FD4 /* EventCollectionViewCell.swift */; };
+		181E129724203FAD00325FD4 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E129024203FAD00325FD4 /* CalendarViewController.swift */; };
+		183C35702429BD3E00307AFD /* ExpandableTBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183C356F2429BD3E00307AFD /* ExpandableTBCell.swift */; };
+		1856895A242F1A940034C758 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18568959242F1A940034C758 /* Utilities.swift */; };
+		18CD09DC242800B5000EA785 /* TripManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CD09DB242800B5000EA785 /* TripManager.swift */; };
+		18CD09E724280542000EA785 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CD09E624280542000EA785 /* Trip.swift */; };
+		18CD09E924280555000EA785 /* EventDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CD09E824280555000EA785 /* EventDetail.swift */; };
+		18CD09F7242808A5000EA785 /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CD09F524280871000EA785 /* TripViewController.swift */; };
+		18CD09F8242808A7000EA785 /* TripInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CD09F624280874000EA785 /* TripInfoCollectionViewCell.swift */; };
+		18CD09FA242808F0000EA785 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CD09F9242808F0000EA785 /* EventViewController.swift */; };
+		18DAF621242DF198007B958A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18DAF620242DF198007B958A /* GoogleService-Info.plist */; };
+		A4D4C297DA8E7DE31D09028C /* libPods-TripWithFriend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED66DA2539161E6D84C7E996 /* libPods-TripWithFriend.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		180D060D242DAEAF007302CD /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		181E127224203EFF00325FD4 /* TripWithFriend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripWithFriend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		181E127524203EFF00325FD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		181E127724203EFF00325FD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		181E127924203EFF00325FD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		181E127C24203EFF00325FD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		181E127F24203EFF00325FD4 /* TripWithFriend.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TripWithFriend.xcdatamodel; sourceTree = "<group>"; };
 		181E128124203F0000325FD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		181E128424203F0000325FD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		181E128624203F0000325FD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		181E128C24203FAD00325FD4 /* AddTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddTripViewController.swift; path = ../../DailyCalendar/DailyCalendar/AddTripViewController.swift; sourceTree = "<group>"; };
+		181E128F24203FAD00325FD4 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventCollectionViewCell.swift; path = ../../DailyCalendar/DailyCalendar/EventCollectionViewCell.swift; sourceTree = "<group>"; };
+		181E129024203FAD00325FD4 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarViewController.swift; path = ../../DailyCalendar/DailyCalendar/CalendarViewController.swift; sourceTree = "<group>"; };
+		183C356F2429BD3E00307AFD /* ExpandableTBCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTBCell.swift; sourceTree = "<group>"; };
+		18568959242F1A940034C758 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		18CD09DB242800B5000EA785 /* TripManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripManager.swift; sourceTree = "<group>"; };
+		18CD09E624280542000EA785 /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		18CD09E824280555000EA785 /* EventDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetail.swift; sourceTree = "<group>"; };
+		18CD09F524280871000EA785 /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TripViewController.swift; path = "All Trip Views/TripViewController.swift"; sourceTree = "<group>"; };
+		18CD09F624280874000EA785 /* TripInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TripInfoCollectionViewCell.swift; path = "All Trip Views/TripInfoCollectionViewCell.swift"; sourceTree = "<group>"; };
+		18CD09F9242808F0000EA785 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		18DAF620242DF198007B958A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		736C8743CAED30BA498D7687 /* Pods-TripWithFriend.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripWithFriend.debug.xcconfig"; path = "Target Support Files/Pods-TripWithFriend/Pods-TripWithFriend.debug.xcconfig"; sourceTree = "<group>"; };
+		90DDCDB165430637B963E158 /* Pods-TripWithFriend.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripWithFriend.release.xcconfig"; path = "Target Support Files/Pods-TripWithFriend/Pods-TripWithFriend.release.xcconfig"; sourceTree = "<group>"; };
+		ED66DA2539161E6D84C7E996 /* libPods-TripWithFriend.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TripWithFriend.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4D4C297DA8E7DE31D09028C /* libPods-TripWithFriend.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +73,8 @@
 			children = (
 				181E127424203EFF00325FD4 /* TripWithFriend */,
 				181E127324203EFF00325FD4 /* Products */,
+				5CB2F1BA4745773DD0243A1C /* Pods */,
+				644286FC967F4FA539EC46DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,14 +91,51 @@
 			children = (
 				181E127524203EFF00325FD4 /* AppDelegate.swift */,
 				181E127724203EFF00325FD4 /* SceneDelegate.swift */,
-				181E127924203EFF00325FD4 /* ViewController.swift */,
 				181E127B24203EFF00325FD4 /* Main.storyboard */,
-				181E128124203F0000325FD4 /* Assets.xcassets */,
 				181E128324203F0000325FD4 /* LaunchScreen.storyboard */,
 				181E128624203F0000325FD4 /* Info.plist */,
+				18DAF620242DF198007B958A /* GoogleService-Info.plist */,
 				181E127E24203EFF00325FD4 /* TripWithFriend.xcdatamodeld */,
+				18568959242F1A940034C758 /* Utilities.swift */,
+				181E128124203F0000325FD4 /* Assets.xcassets */,
+				180D060D242DAEAF007302CD /* AuthViewController.swift */,
+				18CD09F524280871000EA785 /* TripViewController.swift */,
+				18CD09F624280874000EA785 /* TripInfoCollectionViewCell.swift */,
+				181E128C24203FAD00325FD4 /* AddTripViewController.swift */,
+				181E129024203FAD00325FD4 /* CalendarViewController.swift */,
+				18CD09F9242808F0000EA785 /* EventViewController.swift */,
+				181E128F24203FAD00325FD4 /* EventCollectionViewCell.swift */,
+				183C356F2429BD3E00307AFD /* ExpandableTBCell.swift */,
+				18CD09EA242806CA000EA785 /* Trip Classes */,
 			);
 			path = TripWithFriend;
+			sourceTree = "<group>";
+		};
+		18CD09EA242806CA000EA785 /* Trip Classes */ = {
+			isa = PBXGroup;
+			children = (
+				18CD09DB242800B5000EA785 /* TripManager.swift */,
+				18CD09E624280542000EA785 /* Trip.swift */,
+				18CD09E824280555000EA785 /* EventDetail.swift */,
+			);
+			path = "Trip Classes";
+			sourceTree = "<group>";
+		};
+		5CB2F1BA4745773DD0243A1C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				736C8743CAED30BA498D7687 /* Pods-TripWithFriend.debug.xcconfig */,
+				90DDCDB165430637B963E158 /* Pods-TripWithFriend.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		644286FC967F4FA539EC46DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED66DA2539161E6D84C7E996 /* libPods-TripWithFriend.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +145,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 181E128924203F0000325FD4 /* Build configuration list for PBXNativeTarget "TripWithFriend" */;
 			buildPhases = (
+				8AA1CD5A71774CC1DD23FDE0 /* [CP] Check Pods Manifest.lock */,
 				181E126E24203EFF00325FD4 /* Sources */,
 				181E126F24203EFF00325FD4 /* Frameworks */,
 				181E127024203EFF00325FD4 /* Resources */,
+				B07A474A42418D2B8B7E307A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				181E128524203F0000325FD4 /* LaunchScreen.storyboard in Resources */,
+				18DAF621242DF198007B958A /* GoogleService-Info.plist in Resources */,
 				181E128224203F0000325FD4 /* Assets.xcassets in Resources */,
 				181E127D24203EFF00325FD4 /* Main.storyboard in Resources */,
 			);
@@ -136,13 +207,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8AA1CD5A71774CC1DD23FDE0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TripWithFriend-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B07A474A42418D2B8B7E307A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TripWithFriend/Pods-TripWithFriend-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TripWithFriend/Pods-TripWithFriend-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TripWithFriend/Pods-TripWithFriend-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		181E126E24203EFF00325FD4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				181E127A24203EFF00325FD4 /* ViewController.swift in Sources */,
+				18CD09E724280542000EA785 /* Trip.swift in Sources */,
+				18CD09F7242808A5000EA785 /* TripViewController.swift in Sources */,
+				18CD09F8242808A7000EA785 /* TripInfoCollectionViewCell.swift in Sources */,
+				1856895A242F1A940034C758 /* Utilities.swift in Sources */,
+				18CD09DC242800B5000EA785 /* TripManager.swift in Sources */,
+				181E129624203FAD00325FD4 /* EventCollectionViewCell.swift in Sources */,
+				183C35702429BD3E00307AFD /* ExpandableTBCell.swift in Sources */,
+				18CD09FA242808F0000EA785 /* EventViewController.swift in Sources */,
+				181E129324203FAD00325FD4 /* AddTripViewController.swift in Sources */,
+				18CD09E924280555000EA785 /* EventDetail.swift in Sources */,
 				181E127624203EFF00325FD4 /* AppDelegate.swift in Sources */,
+				180D060E242DAEAF007302CD /* AuthViewController.swift in Sources */,
+				181E129724203FAD00325FD4 /* CalendarViewController.swift in Sources */,
 				181E128024203EFF00325FD4 /* TripWithFriend.xcdatamodeld in Sources */,
 				181E127824203EFF00325FD4 /* SceneDelegate.swift in Sources */,
 			);
@@ -286,16 +410,18 @@
 		};
 		181E128A24203F0000325FD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 736C8743CAED30BA498D7687 /* Pods-TripWithFriend.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PZV9H6NZFY;
 				INFOPLIST_FILE = TripWithFriend/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = PersonalProject.TripWithFriend;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PersonalProject.TripWithFriend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -304,16 +430,18 @@
 		};
 		181E128B24203F0000325FD4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90DDCDB165430637B963E158 /* Pods-TripWithFriend.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PZV9H6NZFY;
 				INFOPLIST_FILE = TripWithFriend/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = PersonalProject.TripWithFriend;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PersonalProject.TripWithFriend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
