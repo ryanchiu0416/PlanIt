@@ -7,16 +7,10 @@
 //
 
 import UIKit
+import Firebase
 
-let event1 = EventDetail(placeName: "Seattle, WA", date: "2020-03-23", startTime: "9:00", endTime: "11:00")
-let event2 = EventDetail(placeName: "Los Angeles", date: "2020-03-23", startTime: "13:00", endTime: "16:00")
-let event3 = EventDetail(placeName: "Hub U District", date: "2020-03-24", startTime: "12:00", endTime: "13:00")
-let event4 = EventDetail(placeName: "Bay Area", date: "2020-03-24", startTime: "15:00", endTime: "16:00")
 
-let trip1 = Trip(tripName: "RoadTrip", startDate: "2020-03-23", endDate: "2020-03-24", allEvents: [event1, event2, event3, event4], people: ["Ryan (Me)"])
-
-var tripManager: TripManager = TripManager()
-var userName = "Ryan (Me)"
+var tripManager: TripManager? = nil
 
 
 protocol ToCalendarDelegate {
@@ -25,16 +19,71 @@ protocol ToCalendarDelegate {
 
 
 
-class TripViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class TripViewController: UIViewController {
     @IBOutlet weak var TripCollectionView: UICollectionView!
     
     
+    var allMyTrips: [Trip] = [Trip]()
     var selectedTrip: Trip?
     var delegate: ToCalendarDelegate?
+    let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        allMyTrips = [Trip]()
+        
+        var myTripIDs = [String]()
+        db.collection("Users").document(userEmail!).getDocument { (doc, error) in
+            if error == nil {
+                if doc != nil && doc!.exists {
+                    myTripIDs = doc?.get("MyTrips") as! [String]
+                    print(myTripIDs)
+                    self.getTripData(tripIDs: myTripIDs) { (true) in
+                        print("creating object...")
+                        
+                        tripManager = TripManager(allMyTrips: self.allMyTrips)
+                        DispatchQueue.main.async {
+                            self.TripCollectionView.reloadData()
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    
+    func getTripData(tripIDs: [String], completion: @escaping (Bool) -> ()) {
+        if tripIDs.count == 0 {
+            return
+        }
+        for i in 0...tripIDs.count - 1 {
+            let id = tripIDs[i]
+            db.collection("AllTrips").document(id).getDocument { (doc, error) in
+                if error == nil {
+                    if doc != nil && doc!.exists {
+                        let tripName: String = doc!.get("TripName")! as! String
+                        let startDate: String = doc!.get("StartDate")! as! String
+                        let endDate: String = doc!.get("EndDate")! as! String
+                        let people: [String] = doc!.get("People")! as! [String]
+                        let imageString: String = doc!.get("ImageString") as! String
+                        
+                        self.allMyTrips.append(Trip(tripID: id, tripName: tripName, startDate: startDate, endDate: endDate, people: people, imageString: imageString))
+                        
+                        if self.allMyTrips.count == tripIDs.count {
+                            completion(true)
+                            print("out of for loop...")
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    
     
     
     @IBAction func addNewTripButtonClick(_ sender: Any) {
@@ -42,26 +91,40 @@ class TripViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "AddNewTripSegue" {
-            let vc = segue.destination as? AddTripViewController
-            vc?.delegate = self
-        } else if segue.identifier == "ToCalendar" {
+        if segue.identifier == "ToCalendar" {
             let vc = segue.destination as? CalendarViewController
             self.delegate = vc
-            print("after delegate")
         }
     }
     
-    
+    @IBAction func removeTripButtonClick(_ sender: Any) {
+        let alert = UIAlertController(title: "Do you want to remove this trip?", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            let indexToRemove = (sender as AnyObject).tag!
+            tripManager!.removeTrip(indexToRemove: indexToRemove)
+            DispatchQueue.main.async {
+                self.TripCollectionView.reloadData()
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
+        
+        self.present(alert, animated: true)
+    }
+}
+
+extension TripViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return tripManager.allTrips.count
+        if tripManager == nil || tripManager?.allTrips == nil {
+            return 0
+        }
+        return tripManager!.allTrips.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TripInfoCell", for: indexPath) as! TripInfoCollectionViewCell
         
-        let trip = tripManager.allTrips[indexPath.row]
-        cell.TripNameLabel.text = trip.tripName
+        let trip = tripManager!.allTrips[indexPath.row]
         let startDate = NSAttributedString(string: "\(trip.startDate)", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)])
         let endDate = NSAttributedString(string: "- \(trip.endDate)", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)])
         
@@ -73,9 +136,7 @@ class TripViewController: UIViewController, UICollectionViewDelegate, UICollecti
             for name in trip.people {
                 allNames += ", \(name)"
             }
-            print(allNames)
             allNames = String(allNames.dropFirst(2))
-            print(allNames)
             cell.PeopleNameLabel.text = allNames
         }
         
@@ -83,30 +144,25 @@ class TripViewController: UIViewController, UICollectionViewDelegate, UICollecti
         cell.layer.borderColor = UIColor.clear.cgColor
         cell.layer.borderWidth = 1.0
         
+        cell.backgroundImage.image = UIImage(named: trip.imageString)
+        
+        cell.TripNameNavTitle.title = trip.tripName
+        
+        cell.removeTripButton.tag = indexPath.row
+        cell.removeTripButton.target = self
+        cell.removeTripButton.action = #selector(removeTripButtonClick)
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         TripCollectionView.deselectItem(at: indexPath, animated: true)
-        selectedTrip = tripManager.allTrips[indexPath.row]
+        selectedTrip = tripManager!.allTrips[indexPath.row]
         
         self.performSegue(withIdentifier: "ToCalendar", sender: self)
         
         if let delegate = delegate {
-            print("pass in from didSelectItemAt")
             delegate.passTrip(selectedTrip: selectedTrip!)
-        }
-    }
-    
-
-}
-
-extension TripViewController: NewTripDelegate {
-    func addNewTrip(placeName: String, startDate: String, endDate: String, people: Set<String>) {
-        tripManager.addTrip(newTrip: Trip(tripName: placeName, startDate: startDate, endDate: endDate, allEvents: [], people: people))
-        
-        DispatchQueue.main.async {
-            self.TripCollectionView.reloadData()
         }
     }
 }

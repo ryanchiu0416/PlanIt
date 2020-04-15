@@ -11,11 +11,11 @@ import UIKit
 class TripManager: NSObject {
     var allTrips: [Trip]
     
-    override init() {
-        self.allTrips = [Trip]()
+    init (allMyTrips: [Trip]) {
+        self.allTrips = allMyTrips
     }
     
-    func addTrip(newTrip: Trip) {
-        self.allTrips.append(newTrip)
+    func removeTrip(indexToRemove: Int) {
+        allTrips.remove(at: indexToRemove)
     }
 }

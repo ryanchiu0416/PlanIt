@@ -31,7 +31,7 @@
 
 /* Begin PBXFileReference section */
 		180D060D242DAEAF007302CD /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
-		181E127224203EFF00325FD4 /* TripWithFriend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripWithFriend.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		181E127224203EFF00325FD4 /* PlanIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		181E127524203EFF00325FD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		181E127724203EFF00325FD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		181E127C24203EFF00325FD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		181E127324203EFF00325FD4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				181E127224203EFF00325FD4 /* TripWithFriend.app */,
+				181E127224203EFF00325FD4 /* PlanIt.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,9 +141,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		181E127124203EFF00325FD4 /* TripWithFriend */ = {
+		181E127124203EFF00325FD4 /* PlanIt */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 181E128924203F0000325FD4 /* Build configuration list for PBXNativeTarget "TripWithFriend" */;
+			buildConfigurationList = 181E128924203F0000325FD4 /* Build configuration list for PBXNativeTarget "PlanIt" */;
 			buildPhases = (
 				8AA1CD5A71774CC1DD23FDE0 /* [CP] Check Pods Manifest.lock */,
 				181E126E24203EFF00325FD4 /* Sources */,
@@ -155,9 +155,9 @@
 			);
 			dependencies = (
 			);
-			name = TripWithFriend;
+			name = PlanIt;
 			productName = TripWithFriend;
-			productReference = 181E127224203EFF00325FD4 /* TripWithFriend.app */;
+			productReference = 181E127224203EFF00325FD4 /* PlanIt.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -175,7 +175,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 181E126D24203EFF00325FD4 /* Build configuration list for PBXProject "TripWithFriend" */;
+			buildConfigurationList = 181E126D24203EFF00325FD4 /* Build configuration list for PBXProject "PlanIt" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -188,7 +188,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				181E127124203EFF00325FD4 /* TripWithFriend */,
+				181E127124203EFF00325FD4 /* PlanIt */,
 			);
 		};
 /* End PBXProject section */
@@ -451,7 +451,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		181E126D24203EFF00325FD4 /* Build configuration list for PBXProject "TripWithFriend" */ = {
+		181E126D24203EFF00325FD4 /* Build configuration list for PBXProject "PlanIt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				181E128724203F0000325FD4 /* Debug */,
@@ -460,7 +460,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		181E128924203F0000325FD4 /* Build configuration list for PBXNativeTarget "TripWithFriend" */ = {
+		181E128924203F0000325FD4 /* Build configuration list for PBXNativeTarget "PlanIt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				181E128A24203F0000325FD4 /* Debug */,
