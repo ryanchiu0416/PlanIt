@@ -1,6 +1,6 @@
 # PlanIt
 
-REALTIME TRIP-PLANNING iOS APPLICATION
+A Realtime Trip-planning iOS Application
 - A lightweight iOS app written in `Swift` that simplifies the troublesome
 group travel planning processes
 - Leveraged Firebase’s `FireStore DB` to enable multi-user modification on
